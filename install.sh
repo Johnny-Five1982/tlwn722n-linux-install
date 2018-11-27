@@ -52,7 +52,7 @@ else
 	fi
 fi
 
-echo "Installing firware..."
+echo "Installing firmware..."
 if [ -d $FW_DIR ]; then
 	if [ -f $FW_DIR$FW_NAME ]; then
 		echo ""
@@ -71,7 +71,7 @@ fi
 echo "Changing to directory \"$CWSRC\"..."
 cd $CWSRC
 
-echo "Trying to select the $MOD_NAME diver to be compiled..."
+echo "Trying to select the $MOD_NAME driver to be compiled..."
 if [ -f $CWDRVSLCT ]; then
 	if [ -x $CWDRVSLCT ]; then
 		$CWDRVSLCT $MOD_NAME
@@ -120,7 +120,7 @@ if [ -x "`which modprobe`" ]; then
 		exit 1
 	fi
 else
-	echo "Can not find modprobe," 1>&2
+	echo "Cannot find modprobe," 1>&2
 	echo "So please reboot to apply the changes." 1>&2
 	exit
 fi
